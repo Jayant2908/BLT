@@ -10,7 +10,7 @@ Minimal Ansible playbook to deploy the BLT Django project.
 ## Usage
 1. Copy `inventory-sample.yml` to `inventory.yml` and edit:
    - `ansible_host` - Your server IP or hostname
-   - `ansible_user` - SSH user (e.g., ubuntu, root)
+   - `ansible_user` - SSH user (e.g.ntu, root)
    - `ansible_ssh_private_key_file` - Path to your SSH key
    - `domain` - Your domain name
    - `postgres_db_password` - Secure PostgreSQL password
