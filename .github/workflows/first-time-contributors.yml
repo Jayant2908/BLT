@@ -117,10 +117,17 @@ jobs:
             // 3) Filter true first-timers
             async function priorMergedCountBefore(login) {
               const qPrior = `org:${org} is:pr is:merged author:${login} merged:<${since}`;
-              const r = await github.request('GET /search/issues', { q: qPrior, per_page: 1 });
-              const count = r.data.total_count || 0;
-              console.log("Checking:", login, "prior count:", count);
-              return count;
+              try {
+                const r = await github.request('GET /search/issues', {
+                  q: qPrior,
+                  per_page: 1
+                });
+
+                return r.data.total_count || 0;
+              } catch (e) {
+                console.log("Search failed for:", login, "→ treating as 1");
+                return 1; // assume prior PRs instead of crashing
+              }
             }
 
             const firstTimers = [];
