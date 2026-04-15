@@ -208,23 +208,24 @@ jobs:
 
             let message;
 
-            if (result.exists) {
-              message = `✅ @${username}, your GitHub Sponsors page is set up. You are eligible to receive the $1 reward.`;
-            } else if (result.reason === "not_found") {
-              message = `⚠️ @${username}, we couldn't find your GitHub Sponsors page.
+            if (!result.exists) {
+              message = `⚠️ @${username}, we couldn't verify a usable GitHub Sponsors profile for your account.
 
-            Please set up your payment details here: https://github.com/sponsors
+            To receive the $1 campaign reward, please set up or complete your Sponsors profile:
+            https://github.com/sponsors
 
-            This is required so we can award you $1 for the campaign.`;
-            } else {
-              message = `⚠️ @${username}, we couldn't verify your GitHub Sponsors page (reason: ${result.reason}).
+            Make sure:
+            • your profile is fully configured  
+            • it is publicly accessible  
 
-            Please ensure your Sponsors profile is publicly accessible.`;
+            If you've already set it up, please check your settings and try again.`;
             }
 
-            await github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: message
-            });
+            if (message) {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: message
+              });
+            }
