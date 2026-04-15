@@ -59,8 +59,10 @@ jobs:
                 .replace(/\n/g, ' ')
                 .trim();
 
+            const sinceISO = `${since}T00:00:00Z`;
             // 1) Fetch merged PRs (Search API)
-            const q = `repo:OWASP-BLT/BLT is:pr is:merged merged:>=${since} sort:created-desc`;
+            const q = `repo:OWASP-BLT/BLT is:pr is:merged merged:>=${sinceISO} sort:created-desc`;
+            console.log("QUERY:", q);
             const mergedItems = await github.paginate(
               github.rest.search.issuesAndPullRequests,
               { q, per_page: 100 },
