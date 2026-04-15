@@ -92,8 +92,10 @@ jobs:
               const mAt = it.merged_at;
               if (!mAt) continue;
 
-              const repoFull = it.repository_url.split('/').slice(-2).join('/');
-              const [owner, repo] = repoFull.split('/');
+              const owner = it.base?.repo?.owner?.login;
+              const repo  = it.base?.repo?.name;
+
+              if (!owner || !repo) continue;
 
               const prev = perAuthor.get(login);
               if (!prev || new Date(mAt) < new Date(prev.firstMergedAt)) {
