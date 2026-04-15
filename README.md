@@ -308,16 +308,17 @@ The leaderboard updates monthly, with rankings reset at the start of each month 
 
 | Contributor | First PR | Sponsors |
 |------------|----------|----------|
-| [Wheat1407](https://github.com/dinnar1407-code) | [#6146](https://github.com/OWASP-BLT/BLT/pull/6146) | [Yes](https://github.com/sponsors/dinnar1407-code) |
-| [Krauz](https://github.com/krauzX) | [#6136](https://github.com/OWASP-BLT/BLT/pull/6136) | [Yes](https://github.com/sponsors/krauzX) |
+| [Wheat1407](https://github.com/dinnar1407-code) | [#6146](https://github.com/OWASP-BLT/BLT/pull/6146) | No |
+| [Krauz](https://github.com/krauzX) | [#6136](https://github.com/OWASP-BLT/BLT/pull/6136) | No |
 | [Aarush](https://github.com/Aarush289) | [#6137](https://github.com/OWASP-BLT/BLT/pull/6137) | [Yes](https://github.com/sponsors/Aarush289) |
-| [Anukalp Pandey](https://github.com/anukalp2804) | [#6153](https://github.com/OWASP-BLT/BLT/pull/6153) | [Yes](https://github.com/sponsors/anukalp2804) |
-| [Prachi Sharma](https://github.com/Prachi9506) | [#6149](https://github.com/OWASP-BLT/BLT/pull/6149) | [Yes](https://github.com/sponsors/Prachi9506) |
-| [Penny](https://github.com/py-huang) | [#6150](https://github.com/OWASP-BLT/BLT/pull/6150) | [Yes](https://github.com/sponsors/py-huang) |
-| [藍-Ai](https://github.com/Ai-chan-0411) | [#6161](https://github.com/OWASP-BLT/BLT/pull/6161) | [Yes](https://github.com/sponsors/Ai-chan-0411) |
-| [Neel pandya](https://github.com/Neel-Pandya) | [#6163](https://github.com/OWASP-BLT/BLT/pull/6163) | [Yes](https://github.com/sponsors/Neel-Pandya) |
-| [Swastik Kaushal](https://github.com/SwastikKaushal1) | [#6177](https://github.com/OWASP-BLT/BLT/pull/6177) | [Yes](https://github.com/sponsors/SwastikKaushal1) |
-| [Rimjhim Kumari](https://github.com/rimjhim-codes) | [#6182](https://github.com/OWASP-BLT/BLT/pull/6182) | [Yes](https://github.com/sponsors/rimjhim-codes) |
+| [Anukalp Pandey](https://github.com/anukalp2804) | [#6153](https://github.com/OWASP-BLT/BLT/pull/6153) | No |
+| [Prachi Sharma](https://github.com/Prachi9506) | [#6149](https://github.com/OWASP-BLT/BLT/pull/6149) | No |
+| [Penny](https://github.com/py-huang) | [#6150](https://github.com/OWASP-BLT/BLT/pull/6150) | No |
+| [藍-Ai](https://github.com/Ai-chan-0411) | [#6161](https://github.com/OWASP-BLT/BLT/pull/6161) | No |
+| [Neel pandya](https://github.com/Neel-Pandya) | [#6163](https://github.com/OWASP-BLT/BLT/pull/6163) | No |
+| [Swastik Kaushal](https://github.com/SwastikKaushal1) | [#6177](https://github.com/OWASP-BLT/BLT/pull/6177) | No |
+| [Rimjhim Kumari](https://github.com/rimjhim-codes) | [#6182](https://github.com/OWASP-BLT/BLT/pull/6182) | No |
+| [Samarth1907](https://github.com/Samarth1907) | [#6187](https://github.com/OWASP-BLT/BLT/pull/6187) | No |
 
 <!-- FIRST_TIME_CONTRIBUTORS_END -->
 
