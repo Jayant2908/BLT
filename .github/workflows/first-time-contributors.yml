@@ -150,10 +150,13 @@ jobs:
                   redirect: 'follow'
                 });
 
-                return {
-                  exists: res.ok,
-                  url
-                };
+                const finalUrl = res.url;
+
+                const exists =
+                  finalUrl.includes('/sponsors/') &&
+                  finalUrl.toLowerCase().endsWith(`/${login.toLowerCase()}`);
+
+                return { exists, url };
               } catch {
                 return { exists: false, url };
               }
