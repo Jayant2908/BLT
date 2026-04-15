@@ -59,15 +59,24 @@ jobs:
                 .replace(/\n/g, ' ')
                 .trim();
 
-            const sinceISO = `${since}T00:00:00Z`;
             // 1) Fetch merged PRs (Search API)
-            const q = `repo:OWASP-BLT/BLT is:pr is:merged merged:>=${sinceISO} sort:created-desc`;
-            console.log("QUERY:", q);
-            const mergedItems = await github.paginate(
-              github.rest.search.issuesAndPullRequests,
-              { q, per_page: 100 },
-              (res) => res.data.items
+            const pulls = await github.paginate(
+              github.rest.pulls.list,
+              {
+                owner: 'OWASP-BLT',
+                repo: 'BLT',
+                state: 'closed',
+                per_page: 100
+              }
             );
+
+            const sinceDate = new Date(`${since}T00:00:00Z`);
+
+            const mergedItems = pulls.filter(pr =>
+              pr.merged_at && new Date(pr.merged_at) >= sinceDate
+            );
+
+            console.log("Total merged PRs fetched:", mergedItems.length);
 
             console.log("Total merged PRs fetched:", mergedItems.length);
 
