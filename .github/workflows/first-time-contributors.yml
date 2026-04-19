@@ -74,7 +74,7 @@ jobs:
                 type: 'all'
               },
               (res) => res.data
-            )).filter(r => !r.archived);
+            )).filter(r => !r.archived && !r.disabled);
 
             const earliestMergedByAuthor = new Map();
 
@@ -82,7 +82,7 @@ jobs:
               const repoName = repoInfo.name;
               console.log(`Scanning repo: ${repoName}`);
 
-              let pulls = [];
+              let pulls;
               try {
                 pulls = await github.paginate(
                   github.rest.pulls.list,
