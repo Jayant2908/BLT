@@ -66,33 +66,38 @@ jobs:
 
             const sinceDate = new Date(`${since}T00:00:00Z`);
 
-            const repos = await github.paginate(
+            const repos = (await github.paginate(
               github.rest.repos.listForOrg,
               {
                 org,
                 per_page: 100,
-                type: 'public'
+                type: 'all'
               },
               (res) => res.data
-            );
+            )).filter(r => !r.archived);
 
             const earliestMergedByAuthor = new Map();
 
             for (const repoInfo of repos) {
               const repoName = repoInfo.name;
-
               console.log(`Scanning repo: ${repoName}`);
 
-              const pulls = await github.paginate(
-                github.rest.pulls.list,
-                {
-                  owner: org,
-                  repo: repoName,
-                  state: 'closed',
-                  per_page: 100
-                },
-                (res) => res.data
-              );
+              let pulls = [];
+              try {
+                pulls = await github.paginate(
+                  github.rest.pulls.list,
+                  {
+                    owner: org,
+                    repo: repoName,
+                    state: 'closed',
+                    per_page: 100
+                  },
+                  (res) => res.data
+                );
+              } catch (err) {
+                console.log(`Skipping repo ${repoName}: ${err.status || ''} ${err.message}`);
+                continue;
+              }
 
               for (const pr of pulls) {
                 if (!pr?.user?.login) continue;
