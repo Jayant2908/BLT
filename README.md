@@ -319,6 +319,9 @@ The leaderboard updates monthly, with rankings reset at the start of each month 
 | [Swastik Kaushal](https://github.com/SwastikKaushal1) | [#6177](https://github.com/OWASP-BLT/BLT/pull/6177) | No |
 | [Rimjhim Kumari](https://github.com/rimjhim-codes) | [#6182](https://github.com/OWASP-BLT/BLT/pull/6182) | No |
 | [Samarth1907](https://github.com/Samarth1907) | [#6187](https://github.com/OWASP-BLT/BLT/pull/6187) | No |
+| [Dhruv Sharma](https://github.com/mystic-06) | [#6208](https://github.com/OWASP-BLT/BLT/pull/6208) | [Yes](https://github.com/sponsors/mystic-06) |
+| [CHAIMAA EL JERRAR](https://github.com/Chaimaekit) | [#6201](https://github.com/OWASP-BLT/BLT/pull/6201) | [Yes](https://github.com/sponsors/Chaimaekit) |
+| [Mberic](https://github.com/Mberic) | [#6198](https://github.com/OWASP-BLT/BLT/pull/6198) | No |
 
 <!-- FIRST_TIME_CONTRIBUTORS_END -->
 
